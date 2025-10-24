@@ -33,7 +33,8 @@ a{
 }
 
 img{
-    max-width: 100%;
+    max-width: 90%;
+    
 
 }
 
@@ -55,4 +56,29 @@ h2{
 }
 h3{
     font-size: 2.4rem;
+}
+/*header*/
+.header{
+    display: flex; /**/
+    justify-content: center;/*centrar horizontalmente*/
+}
+.header_logo{
+    margin: 3rem 0;
+}
+/*navegacion*/
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;/*tipo margen al navegacion*/
+    display: flex; /*para */
+    justify-content: center;
+    gap: 2rem;
+}
+.navegacion_enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.navegacion_enlace--activo, 
+.navegacion_enlace:hover{
+color: var(--secundario);
 }
