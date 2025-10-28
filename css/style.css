@@ -198,3 +198,25 @@ color: var(--secundario);
     height: 100%;
     object-fit: cover; /* rellena el contenedor cortando la imagen si es necesario */
 }
+
+/*Bloques*/
+
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*2 columnas iguales y 1fr significa que ocupe todo el espacio*/
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .bloques{
+        grid-template-columns: repeat(4, 1fr); /*2 columnas iguales y 1fr significa que ocupe todo el espacio*/        
+    }
+}
+.bloque{
+    text-align: center;
+}
+.bloque__imagen{
+    width: 80%;
+}
+.bloque__titulo{
+    margin: 0;
+}
