@@ -161,20 +161,40 @@ color: var(--secundario);
 .nosotros{
     display: grid; /*esto es para que se vea en columnas*/
     grid-template-rows: repeat(2, auto) ;
+    padding: 0 2rem; /* espacio lateral izquierdo y derecho (móvil) */
 }
 @media (min-width: 768px){
     .nosotros{
     grid-template-columns: repeat(2, 1fr);/*2 columnas iguales y repetidas*/
     column-gap: 2rem; /*separacion entre columnas*/
+    padding: 0 4rem; /* más espacio lateral en pantallas grandes */
+    
     }
 }
 .nosotros__imagen{
     grid-row: 1 / 2; /*imagen en la primera fila*/
-    
+    display: block; /* permite margin:auto y evita espacios inline */
+    margin: 0 auto; /* centra horizontalmente si la imagen no ocupa todo el ancho */
+    justify-self: center; /* centra dentro de la celda de la grid (horizontal) */
+    align-self: center; /* centra dentro de la celda de la grid (vertical) */
+    width: 100%; /* por defecto ocupa todo el ancho del contenedor */
+    max-width: 100%; /* evitar desbordes */
+    height: auto; /* mantener proporción */
+    /* Si quieres que la imagen cubra completamente su área y recorte según sea necesario,
+       añade la clase `.nosotros__imagen--cover` al elemento <img> en el HTML. */
 }
 @media (min-width: 768px){
     .nosotros__imagen{
         grid-column: 2 / 3; /*imagen en la segunda columna*/
     }
         
+}
+
+/* Variante: hacer que la imagen ocupe todo (recortando si hace falta). 
+   Úsala añadiendo `class="nosotros__imagen nosotros__imagen--cover"` al <img>. */
+.nosotros__imagen--cover{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* rellena el contenedor cortando la imagen si es necesario */
 }
