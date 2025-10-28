@@ -157,4 +157,24 @@ color: var(--secundario);
     grid-column: 2 / 4;
 }
 }
-
+/*nOOTROS*/
+.nosotros{
+    display: grid; /*esto es para que se vea en columnas*/
+    grid-template-rows: repeat(2, auto) ;
+}
+@media (min-width: 768px){
+    .nosotros{
+    grid-template-columns: repeat(2, 1fr);/*2 columnas iguales y repetidas*/
+    column-gap: 2rem; /*separacion entre columnas*/
+    }
+}
+.nosotros__imagen{
+    grid-row: 1 / 2; /*imagen en la primera fila*/
+    
+}
+@media (min-width: 768px){
+    .nosotros__imagen{
+        grid-column: 2 / 3; /*imagen en la segunda columna*/
+    }
+        
+}
