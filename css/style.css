@@ -33,7 +33,7 @@ a{
 }
 
 img{
-    max-width: 90%;
+    width: 100%;
     
 
 }
@@ -216,7 +216,57 @@ color: var(--secundario);
 }
 .bloque__imagen{
     width: 80%;
+    display: block; /* hace que margin:auto funcione y elimina espacio inline */
+    margin: 0 auto;  /* centra horizontalmente */
+    width: auto;     /* permite que imágenes más pequeñas queden centradas */
+
 }
 .bloque__titulo{
     margin: 0;
+}
+/*pagin del producto*/
+@media (min-width: 768px){
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /*2 columnas iguales*/
+        column-gap: 2rem;
+    }
+}
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);/*2 columnas iguales*/
+    gap: 1.5rem; /*separacion entre columnas*/
+
+}
+.formulario__campo{
+    border: 1rem solid var(--primarioOscuro);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+
+/* Estilo para las opciones del select */
+.formulario__campo option {
+    background-color: var(--primario); /* Fondo oscuro para las opciones */
+    color: var(--blanco); /* Texto en blanco */
+    padding: 1rem; /* Mismo padding que el select */
+}
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: backgroup-color .3s ease;
+    grid-column: 1 / 3;
+}
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
+.formulario__campo:hover{
+    cursor: pointer;
 }
