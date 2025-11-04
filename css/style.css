@@ -33,9 +33,8 @@ a{
 }
 
 img{
-    width: 100%;
-    
-
+    max-width: 100%;
+    height: auto;
 }
 
 .contenedor{
@@ -225,6 +224,12 @@ color: var(--secundario);
     margin: 0;
 }
 /*pagin del producto*/
+.camisa__imagen{
+    display: block; /* hace que margin:auto funcione y elimina espacio inline */
+    margin: 0 auto;  /* centra horizontalmente */
+    max-width: 100%; /* evita que la imagen desborde su contenedor */
+    width: auto;     /* permite que imágenes más pequeñas queden centradas */
+}
 @media (min-width: 768px){
     .camisa{
         display: grid;
