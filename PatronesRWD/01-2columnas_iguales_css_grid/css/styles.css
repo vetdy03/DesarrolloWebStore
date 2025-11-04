@@ -41,8 +41,12 @@ h1 {
 /** CODIGO AQUI **/
 @media (min-width: 768px){
     .dos-columnas {
-        display: grid; /* Activamos el grid */
+        display: flex; /* Activamos flexbox */
         grid-template-columns: 50% 50%; /* Definimos dos columnas iguales */
-        column-gap: 1rem; /* Espacio entre columnas */
+        gap: 1rem; /* Espacio entre columnas */
+    }
+    .entrada-blog {
+        /*width: 100%; /* Cada entrada ocupa el 100% del contenedor flex */
+        flex: 0 0 calc(50% - 0.5rem); /* Cada entrada ocupa el 50% del contenedor flex menos la mitad del gap */
     }
 }
