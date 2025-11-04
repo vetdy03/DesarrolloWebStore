@@ -39,3 +39,12 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+@media (min-width: 768px){
+    .tres-columnas{
+        display: flex; /* Activamos flexbox */
+        justify-content: space-between; /* Espacio entre columnas */
+    }
+        .entrada-blog{
+        flex: 0 0 calc(33.33% - 1rem); /* Cada entrada ocupa un tercio del contenedor flex menos la parte proporcional del gap */
+    }
+}
