@@ -34,7 +34,7 @@ p {
 .contenedor {
     max-width: 1200px;
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 .entrada-blog a {
@@ -52,7 +52,7 @@ p {
     .column-drop-flex{
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
     }
     .contenido-principal,  .primera{
         flex-basis: calc(50% - 1rem);
@@ -61,5 +61,5 @@ p {
 }
 @media (min-width:768px){
     .contenido-principal, .primera, .segunda{
-        flex:  0 0 calc(33.3½);
+        flex:  0 0 calc(33.3% - 1rem);
     }}
